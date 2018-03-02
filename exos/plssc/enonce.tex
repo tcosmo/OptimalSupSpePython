@@ -1,0 +1,20 @@
+\subsection{Plus longues sous suites croissantes}
+
+On considère un tableau d'entiers: $u=[u_0,\, \dots,\, u_{n-1}]$. On appelle sous suite de $u$ tout tableau 
+$v=[u_{i_1},\, \dots,\, u_{i_{p}}]$ avec $0 \leq i_1 < i_2 < \dots < i_p < n$.\\
+On dit qu'une sous suite $v$ est croissante si le tableau 
+$v$ est trié dans l'ordre croissant: $u_{i_1} \leq u_{i_2} \leq \dots \leq u_{i_p}$.\\
+Le but de cet exercice est de construire une fonction qui extrait de $u$ une sous suite croissante de taille maximale.
+
+\begin{enumerate}
+\item Donner toutes les plus longues sous suites croissantes de $u=[1,4,2,5,3,0]$ (il y'en a trois).
+\item On note $u[:i+1] = [u_0,\, \dots ,\, u_{i}]$. On note $m_i$ la taille des plus longues sous suites croissantes qui finissent au dernier élément de $u[:i+1]$.
+	\begin{enumerate}
+		\item Que vaut $m_0$ ?
+		\item Comment calculer $m_i$ en fonction de $m_{i-1},\,\dots,\,m_0$ ?
+		\item Implémenter la fonction \texttt{tailles\_plssc} qui prend en paramètre la liste $u$ et renvoie la liste $[m_0,\,\dots,\,m_{n-1}]$.
+		\item Quelle est la complexité de votre algorithme ?
+		\item (\textbf{bonus}) Peut on faire mieux ?	
+	\end{enumerate}
+\item Utiliser votre fonction \texttt{tailles\_plssc} pour coder une fonction \texttt{une\_plssc} qui prend en paramètre la liste $u$ et renvoie une plus longue sous suite croissante de $u$.
+\end{enumerate}
